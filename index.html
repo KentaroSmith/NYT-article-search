@@ -8,8 +8,7 @@
     <title>New York Times Search</title>
 
     <!--Importing jQuery library-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
-        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!--Bootstrap style sheet-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -19,39 +18,63 @@
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">New York Times Search</h1>
+            <h1 class="display-4"><i class="far fa-newspaper"></i>New York Times Search</h1>
         </div>
     </div>
 
     <div id="search-parameters">
-        <form>
-            <div class="form-group">
-                <label for="searchterm">Search Term</label>
-                <input type="search" class="form-control" id="search-term" placeholder="search">
-            </div>
-            <div class="form-group">
-                <label for="recordnumber">Number of Records to Retrieve<label>
-                        <input type="number" class="form-control" id="num-of-records" placeholder="number">
-            </div>
-            <div class="form-group">
-                <label for="startyear">Start Year</label>
-                <input type="number" class="form-control" id="start-year" placeholder="Year">
-            </div>
-            <div class="form-group">
-                <label for="endyear">End Year</label>
-                <input type="number" class="form-control" id="end-year" placeholder="Year">
-            </div>
-
-
-
+        <div class="card">
+            <div class="card-header">Search Parameters</div>
+        </div>
     </div>
-    <button type="search" class="btn btn-primary" id="search">Search</button>
-    <button type="clear results" class="btn btn-primary" id="clear-results">Clear Results</button>
+    <form>
+        <div class="form-group">
+            <label for="searchterm">Search Term</label>
+            <input type="text" id="search-term" class="form-control" placeholder="search">
+        </div>
+        <div class="form-group">
+            <label for="recordnumber">Number of Records to Retrieve
+                <select type="search" class="form-control" id="num-of-records">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="startyear">Start Year</label>
+            <input type="number" class="form-control" id="start-year" placeholder="Year">
+        </div>
+        <div class="form-group">
+            <label for="endyear">End Year</label>
+            <input type="number" class="form-control" id="end-year" placeholder="Year">
+        </div>
+
+
+
+        </div>
+        <button type="submit" class="btn btn-primary" id="search"><i class="fas fa-search"></i>Search</button>
+        <button type="clear" class="btn btn-primary" id="clear-results"><i class="far fa-trash-alt"></i>Clear
+            Results</button>
     </form>
     </div>
 
-    <div id="top-articles">
-
+    <div id="top-articles"><i class="far fa-list-alt">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">
+        </i>Top Articles</a>
+        <a href="#" class="list-group-item list-group-item-action"></a>
+        <a href="#" class="list-group-item list-group-item-action"></a>
+        <a href="#" class="list-group-item list-group-item-action"></a>
+        <a href="#" class="list-group-item list-group-item-action disabled"></a>
+    </div>
     </div>
 
     <!--Sticky Footer-->
