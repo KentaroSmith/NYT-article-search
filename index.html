@@ -10,13 +10,17 @@
     <!--Importing jQuery library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/ef78956514.js"></script>
+
     <!--Bootstrap style sheet-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
             <h1 class="display-4"><i class="far fa-newspaper"></i>New York Times Search</h1>
         </div>
@@ -24,16 +28,16 @@
 
     <div id="search-parameters">
         <div class="card">
-            <div class="card-header">Search Parameters</div>
+            <div class="card-header"> <i class="fas fa-search"></i> Search Parameters</div>
         </div>
     </div>
     <form>
         <div class="form-group">
-            <label for="searchterm">Search Term</label>
-            <input type="text" id="search-term" class="form-control" placeholder="search">
+            <label for="searchterm"> Search Term: </label>
+            <input type="search" class="form-control" id="search-term" placeholder="Search">
         </div>
         <div class="form-group">
-            <label for="recordnumber">Number of Records to Retrieve
+            <label for="recordnumber">Number of Records to Retrieve:
                 <select type="search" class="form-control" id="num-of-records">
                     <option>1</option>
                     <option>2</option>
@@ -49,36 +53,36 @@
             </label>
         </div>
         <div class="form-group">
-            <label for="startyear">Start Year</label>
+            <label for="startyear">Start Year (Optional): </label>
             <input type="number" class="form-control" id="start-year" placeholder="Year">
         </div>
         <div class="form-group">
-            <label for="endyear">End Year</label>
+            <label for="endyear">End Year (Optional): </label>
             <input type="number" class="form-control" id="end-year" placeholder="Year">
         </div>
 
 
 
         </div>
-        <button type="submit" class="btn btn-primary" id="search"><i class="fas fa-search"></i>Search</button>
-        <button type="clear" class="btn btn-primary" id="clear-results"><i class="far fa-trash-alt"></i>Clear
+        <button type="submit" class="btn btn-primary" id="search"><i class="fas fa-search"></i> Search</button>
+        <button type="clear results" class="btn btn-primary" id="clear-results"><i class="far fa-trash-alt"></i> Clear
             Results</button>
     </form>
     </div>
 
-    <div id="top-articles"><i class="far fa-list-alt">
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action active">
-        </i>Top Articles</a>
-        <a href="#" class="list-group-item list-group-item-action"></a>
-        <a href="#" class="list-group-item list-group-item-action"></a>
-        <a href="#" class="list-group-item list-group-item-action"></a>
-        <a href="#" class="list-group-item list-group-item-action disabled"></a>
-    </div>
+    <div id="top-articles">
+        <div class="list-group">
+            <div class="card-header"><i class="far fa-list-alt"></i> Top
+                Articles</div>
+            <a href="#" class="list-group-item list-group-item-action"></a>
+            <a href="#" class="list-group-item list-group-item-action"></a>
+            <a href="#" class="list-group-item list-group-item-action"></a>
+            <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true"></a>
+        </div>
     </div>
 
     <!--Sticky Footer-->
-    <footer class="footer mt-auto py-3">
+    <footer class="footer mt-auto py-3 text-center">
         <span>Made with lots & lots of blood, sweat, & tears </span>
     </footer>
 
